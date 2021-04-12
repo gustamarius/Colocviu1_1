@@ -2,6 +2,7 @@ package ro.pub.cs.systems.eim.colocviu1_1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,9 +43,15 @@ public class Colocviu1_1MainActivity extends AppCompatActivity {
                     break;
                 case R.id.secondactivitybutton:
                     counter += 1;
+                    Intent intent = new Intent(getApplicationContext(), Colocviu1_1SecondaryActivity.class);
+                    String message = display.getText().toString();
+                    intent.putExtra(Constants.COUNTER, counter);
+                    intent.putExtra(Constants.MESSAGE, message);
+                    startActivityForResult(intent, 1);
+                    break;
 //                    String aux = display.getText().toString();
 //                    display.setText(aux.concat(",Nord"));
-                    break;
+//                    break;
             }
             Log.d("Msg", new String(String.valueOf(counter)));
         }

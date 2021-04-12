@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Colocviu1_1">
+        <activity android:name=".Colocviu1_1SecondaryActivity">
+            <intent-filter>
+                <action android:name="ro.pub.cs.systems.eim.colocviu1_1.PracticalTest01SecondaryActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <activity android:name=".Colocviu1_1MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
